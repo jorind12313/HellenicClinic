@@ -1,9 +1,9 @@
-package com.euroclinic.hellenicclinic;
+package com.euroclinic.hellenicclinic.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class MainController {
     @FXML
     private Label welcomeText;
 
