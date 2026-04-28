@@ -1,4 +1,10 @@
 package com.euroclinic.hellenicclinic.models;
 
-public class Doctor {
+public class Doctor extends Person{
+    String specialty;
+
+    public Doctor(String id, String name, String phone, String specialty){
+        super(id, name, phone);
+        this.specialty = specialty;
+    }
 }
