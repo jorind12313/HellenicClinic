@@ -8,4 +8,8 @@ public class Patient extends Person{
       super(id, name, phone);
       this.medicalHistory = medicalHistory;
     }
+
+    public String getMedicalHistory() {
+        return medicalHistory;
+    }
 }
