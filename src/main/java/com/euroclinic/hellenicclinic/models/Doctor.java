@@ -7,4 +7,8 @@ public class Doctor extends Person{
         super(id, name, phone);
         this.specialty = specialty;
     }
+
+    public String getSpecialty() {
+        return specialty;
+    }
 }
