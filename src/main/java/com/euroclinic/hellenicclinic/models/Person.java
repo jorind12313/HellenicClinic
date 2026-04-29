@@ -1,9 +1,9 @@
 package com.euroclinic.hellenicclinic.models;
 
 public class Person {
-    String name;
-    String phone;
-    String id;
+    private String name;
+    private String phone;
+    private String id;
     public Person(String id, String name, String phone) {
         this.id = id;
         this.name = name;
@@ -20,3 +20,4 @@ public class Person {
         return phone;
     }
 }
+
