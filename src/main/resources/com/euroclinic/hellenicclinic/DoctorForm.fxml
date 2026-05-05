@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" prefWidth="350.0" prefHeight="400.0">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="350.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.euroclinic.hellenicclinic.controller.DoctorController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <children>
+        <Label text="Doctor Form">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label graphicTextGap="10.0" text="Doctor Name: " />
+        <TextField fx:id="nameField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" onAction="#nameField" prefHeight="0.0" prefWidth="310.0" />
+        <Label alignment="TOP_LEFT" graphicTextGap="5.0" nodeOrientation="RIGHT_TO_LEFT" text="Phone Number:" />
+        <TextField fx:id="phoneField" alignment="TOP_LEFT" onAction="#phoneField" prefHeight="25.0" prefWidth="138.0" />
+        <Label alignment="TOP_CENTER" contentDisplay="RIGHT" graphicTextGap="10.0" prefHeight="17.0" prefWidth="112.0" text="Specialty" />
+        <TextField fx:id="specialtyField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" onAction="#specialtyField" prefHeight="0.0" prefWidth="310.0" />
+        <Button mnemonicParsing="false" onAction="#handleSaveDoctor" prefHeight="11.0" prefWidth="52.0" text="Add" />
+    </children>
+
 </VBox>
