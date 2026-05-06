@@ -41,7 +41,7 @@ public class PatientController {
         Patient newPatient = new Patient(uniqueId, name, phone, history);
 
         // Save them to our main ClinicManager list
-        manager.getPatients().add(newPatient);
+        manager.addPatient(newPatient);
         System.out.println("Patient Saved: " + name + " (ID: " + uniqueId + ")");
 
         // Close the pop-up window automatically

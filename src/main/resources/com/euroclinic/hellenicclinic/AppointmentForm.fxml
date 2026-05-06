@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" prefWidth="400.0" prefHeight="450.0">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.euroclinic.hellenicclinic.controller.AppointmentController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+
+    <Label text="Book Appointment">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Label>
+
+    <Label text="Select Doctor:" />
+    <ComboBox fx:id="doctorComboBox" prefWidth="250.0" />
+
+    <Label text="Select Patient:" />
+    <ComboBox fx:id="patientComboBox" prefWidth="250.0" />
+
+    <Label text="Select Date:" />
+    <DatePicker fx:id="datePicker" prefWidth="250.0" />
+
+    <Label text="Enter Time (HH:mm, e.g., 14:30):" />
+    <TextField fx:id="timeField" maxWidth="250.0" promptText="14:30" />
+
+    <Label fx:id="statusLabel" text="" textFill="red" />
+
+    <Button mnemonicParsing="false" onAction="#handleScheduleAppointment" text="Confirm Booking" />
 </VBox>

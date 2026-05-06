@@ -1,0 +1,99 @@
+/* --- MAIN BACKGROUND & FONT --- */
+.root {
+    -fx-background-color: #f4f7f9; /* Soft, clean grayish-blue background */
+    -fx-font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- TITLES & LABELS --- */
+.label {
+    -fx-text-fill: #2c3e50; /* Dark slate text for readability */
+    -fx-font-size: 14px;
+}
+
+/* Make headers bigger and bold */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f5f99; /* Deep medical blue */
+}
+
+/* --- BUTTONS --- */
+.button {
+    -fx-background-color: #2196F3; /* Bright, inviting blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px; /* Rounded corners */
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand; /* Changes mouse to a pointer when hovering */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Soft shadow */
+}
+
+/* Button Hover Animation */
+.button:hover {
+    -fx-background-color: #1976D2; /* Darker blue when mouse is over it */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 3); /* Shadow grows */
+}
+
+/* Button Click Animation */
+.button:pressed {
+    -fx-background-color: #0d47a1;
+    -fx-translate-y: 2px; /* Physically pushes the button down */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+/* --- TEXT FIELDS & COMBO BOXES --- */
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #cfd9e0;
+    -fx-border-width: 1px;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+/* Glowing border when user clicks to type */
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffffff;
+}
+
+/* --- MAIN DASHBOARD TABLE --- */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #cfd9e0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);
+}
+
+/* Table Header (Top Row) */
+.table-view .column-header-background {
+    -fx-background-color: #1f5f99;
+    -fx-background-radius: 8px 8px 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Zebra Striping for Rows */
+.table-row-cell {
+    -fx-cell-size: 40px; /* Taller rows for a modern look */
+}
+.table-row-cell:odd {
+    -fx-background-color: #f9fbfd;
+}
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+/* Highlight row when clicked */
+.table-row-cell:selected {
+    -fx-background-color: #bbdefb;
+    -fx-text-fill: black;
+}

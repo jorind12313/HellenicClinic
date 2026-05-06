@@ -33,7 +33,9 @@ public class DoctorController {
         String uniqueId = "DOC-" + System.currentTimeMillis();
 
         Doctor newDoctor = new Doctor(uniqueId, name, specialty, phone);
-        manager.getDoctors().add(newDoctor);
+        // Replace: manager.getDoctors().add(newDoctor);
+        // With this:
+        manager.addDoctor(newDoctor);
 
         System.out.println("Doctor Saved: " + name + " (ID: " + uniqueId + ")");
 

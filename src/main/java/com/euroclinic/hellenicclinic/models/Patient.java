@@ -10,6 +10,12 @@ public class Patient extends Person{
     }
 
     public String getMedicalHistory() {
+
         return medicalHistory;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + " (Phone: " + this.getPhone() + ")";
     }
 }

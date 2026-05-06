@@ -19,11 +19,11 @@
     </top>
 
     <center>
-        <TableView fx:id="appointmentsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <TableView fx:id="appointmentTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <columns>
-                <TableColumn prefWidth="150.0" text="Date &amp; Time" />
-                <TableColumn prefWidth="150.0" text="Doctor" />
-                <TableColumn prefWidth="150.0" text="Patient" />
+                <TableColumn fx:id="dateTimeColumn" prefWidth="150.0" text="Date &amp; Time" />
+                <TableColumn fx:id="doctorColumn" prefWidth="150.0" text="Doctor" />
+                <TableColumn fx:id="patientColumn" prefWidth="150.0" text="Patient" />
             </columns>
             <BorderPane.margin>
                 <Insets left="20.0" right="20.0" />
