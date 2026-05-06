@@ -42,7 +42,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/euroclinic/hellenicclinic/PatientForm.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 350, 400);
 
-            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/css/style.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/style.css").toExternalForm());
 
             PatientController popupController = fxmlLoader.getController();
             popupController.setManager(this.manager);
@@ -65,7 +65,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/euroclinic/hellenicclinic/DoctorForm.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 350, 400);
 
-            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/css/style.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/style.css").toExternalForm());
 
             DoctorController popupController = fxmlLoader.getController();
             popupController.setManager(this.manager);
@@ -87,7 +87,7 @@ public class MainController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/euroclinic/hellenicclinic/AppointmentForm.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 400, 450);
-            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/css/style.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/style.css").toExternalForm());
 
 
             AppointmentController popupController = fxmlLoader.getController();

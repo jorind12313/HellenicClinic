@@ -15,7 +15,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/com/euroclinic/hellenicclinic/MainWindow.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-
+        scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/style.css").toExternalForm());
         primaryStage.setTitle("Hellenic Clinic Management");
         primaryStage.setScene(scene);
         primaryStage.show();
