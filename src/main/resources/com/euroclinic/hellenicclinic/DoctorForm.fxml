@@ -10,7 +10,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label text="Doctor Form">
+    <Label styleClass="header-label" text="Doctor Form">
         <font>
             <Font name="System Bold" size="30.0" />
         </font>

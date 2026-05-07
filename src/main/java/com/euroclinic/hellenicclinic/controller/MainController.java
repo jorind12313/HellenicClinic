@@ -85,7 +85,7 @@ public class MainController {
     public void openAppointmentForm() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/euroclinic/hellenicclinic/AppointmentForm.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 400, 450);
+            Scene scene = new Scene(fxmlLoader.load(), 400, 600);
             scene.getStylesheets().add(getClass().getResource("/com/euroclinic/hellenicclinic/style.css").toExternalForm());
 
 

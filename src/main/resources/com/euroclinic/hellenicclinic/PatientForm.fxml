@@ -10,7 +10,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Label text="Patient Form">
+      <Label styleClass="header-label" text="Patient Form">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -21,7 +21,7 @@
       <TextField fx:id="phoneField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="138.0" />
       <Label alignment="TOP_CENTER" contentDisplay="RIGHT" graphicTextGap="10.0" prefHeight="17.0" prefWidth="112.0" text="Medical History:" />
       <TextField fx:id="historyField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="0.0" prefWidth="310.0" />
-      <Button mnemonicParsing="false" onAction="#handleSavePatient" prefHeight="11.0" prefWidth="52.0" text="Add" />
+      <Button mnemonicParsing="false" onAction="#handleSavePatient" prefHeight="35.0" prefWidth="71.0" text="Add" />
    </children>
 
 </VBox>
