@@ -22,7 +22,6 @@ public class AppointmentController {
 
     public void setManager(ClinicManager manager) {
         this.manager = manager;
-        // The moment the manager is passed over, fill up our dropdown lists!
         populateDropdowns();
     }
 
@@ -48,18 +47,18 @@ public class AppointmentController {
         }
 
         try {
-            // 2. Parse typed time (e.g., "14:30") into a LocalTime object
+
             LocalTime time = LocalTime.parse(timeRaw, DateTimeFormatter.ofPattern("HH:mm"));
             LocalDateTime appointmentDateTime = LocalDateTime.of(date, time);
 
-            // 3. Put your core double-booking scheduling logic to work!
+
             boolean success = manager.scheduleAppointment(selectedDoc, selectedPat, appointmentDateTime);
 
             if (success) {
                 statusLabel.setStyle("-fx-text-fill: green;");
                 statusLabel.setText("Appointment Booked Successfully!");
 
-                // Clear inputs for next entry
+
                 timeField.clear();
                 datePicker.setValue(null);
             } else {

@@ -29,17 +29,14 @@ public class DoctorController {
             return;
         }
 
-        // Auto-Generate a unique ID for the doctor
+
         String uniqueId = "DOC-" + System.currentTimeMillis();
 
         Doctor newDoctor = new Doctor(uniqueId, name, specialty, phone);
-        // Replace: manager.getDoctors().add(newDoctor);
-        // With this:
         manager.addDoctor(newDoctor);
 
         System.out.println("Doctor Saved: " + name + " (ID: " + uniqueId + ")");
 
-        // Close the window
         Stage stage = (Stage) nameField.getScene().getWindow();
         stage.close();
     }

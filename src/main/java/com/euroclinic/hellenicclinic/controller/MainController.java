@@ -1,7 +1,7 @@
 package com.euroclinic.hellenicclinic.controller;
 
 import com.euroclinic.hellenicclinic.models.ClinicManager;
-import com.euroclinic.hellenicclinic.models.Appointment; // Fixed: Missing import!
+import com.euroclinic.hellenicclinic.models.Appointment;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -30,11 +30,10 @@ public class MainController {
         patientColumn.setCellValueFactory(new PropertyValueFactory<>("patient"));
         dateTimeColumn.setCellValueFactory(new PropertyValueFactory<>("appointmentDateTime"));
 
-        // Fixed: Added the missing closing bracket for the if-statement here
         if (manager != null) {
             appointmentTable.setItems(FXCollections.observableArrayList(manager.getAppointments()));
         }
-    } // Fixed: Properly closing the initialize method block
+    }
 
     @FXML
     public void openPatientForm() {
@@ -99,7 +98,6 @@ public class MainController {
             popupStage.initModality(Modality.APPLICATION_MODAL);
             popupStage.showAndWait();
 
-            // Force reload the list from the manager's standard ArrayList structure
             if (manager != null) {
                 appointmentTable.setItems(FXCollections.observableArrayList(manager.getAppointments()));
             }
@@ -108,6 +106,30 @@ public class MainController {
         } catch (Exception e) {
             System.out.println("Error loading Appointment window: " + e.getMessage());
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void filterTodayAppointments() {
+
+        javafx.collections.ObservableList<Appointment> todaysAppointments = javafx.collections.FXCollections.observableArrayList();
+        java.time.LocalDate today = java.time.LocalDate.now();
+
+        for (Appointment app : manager.getAppointments()) {
+            if (app.getAppointmentDateTime().toLocalDate().equals(today)) {
+                todaysAppointments.add(app);
+            }
+        }
+
+        appointmentTable.setItems(todaysAppointments);
+        System.out.println("Filtered table to show only today's appointments.");
+    }
+
+    @FXML
+    public void showAllAppointments() {
+        if (manager != null) {
+            appointmentTable.setItems(javafx.collections.FXCollections.observableArrayList(manager.getAppointments()));
+            System.out.println("Filter cleared. Showing all appointments.");
         }
     }
 }

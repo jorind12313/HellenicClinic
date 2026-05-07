@@ -15,10 +15,9 @@ import java.util.List;
 
 public class FileHandler {
 
-    // Define the exact path to your data folder so Java never gets lost!
     private static final String DATA_PATH = "src/main/java/com/euroclinic/hellenicclinic/data/";
 
-    // ================= APPOINTMENTS =================
+    //APPOINTMENTS
 
     public static void saveAppointments(List<Appointment> appointments) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_PATH + "appointments.csv"))) {
@@ -74,7 +73,7 @@ public class FileHandler {
         return loadedAppointments;
     }
 
-    // ================= PATIENTS =================
+    //PATIENTS
 
     public static void savePatients(List<Patient> patients) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_PATH + "patients.csv"))) {
@@ -105,7 +104,7 @@ public class FileHandler {
         return loadedPatients;
     }
 
-    // ================= DOCTORS =================
+    //DOCTORS
 
     public static void saveDoctors(List<Doctor> doctors) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_PATH + "doctors.csv"))) {

@@ -10,7 +10,6 @@ public class Patient extends Person{
     }
 
     public String getMedicalHistory() {
-
         return medicalHistory;
     }
 

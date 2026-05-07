@@ -34,9 +34,11 @@
     <bottom>
         <HBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="addPatientBtn" onAction="#openPatientForm" text="➕ Add Patient" />
+                <Button fx:id="addPatientBtn" alignment="CENTER" onAction="#openPatientForm" text="➕ Add Patient" />
                 <Button fx:id="addDoctorBtn" onAction="#openDoctorForm" text="➕ Add Doctor" />
                 <Button fx:id="bookAppointmentBtn" onAction="#openAppointmentForm" text="📅 Book Appointment" />
+            <Button mnemonicParsing="false" onAction="#filterTodayAppointments" text="Today's Appointments" />
+            <Button mnemonicParsing="false" onAction="#showAllAppointments" text="Show All" />
             </children>
             <BorderPane.margin>
                 <Insets bottom="20.0" top="20.0" />
